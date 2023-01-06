@@ -180,8 +180,9 @@ bar {
 	  traffic.showname=false    \
 	  playerctl.format='{{artist}} [{{duration(position)}}/{{duration(mpris:length)}}]' \
           playerctl.layout='playerctl.song,playerctl.pause' \
-	  traffic.states="up" memory.format='{percent:2.02f}%' \
-	  datetime.format="%a %b %d %H:%M:%S" bluetooth.manager=blueman-manager   \
+         cpu.format='{:.0f}%' traffic.format='{:.01f}' \
+	  traffic.states="up" memory.format='{percent:2.0f}%' \
+	  datetime.format="%a %b %d %H:%M" bluetooth.manager=blueman-manager   \
 	 -t iceberg-dark-powerline 
 	position top
 	i3bar_command i3bar --transparency
