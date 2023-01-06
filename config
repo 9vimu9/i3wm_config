@@ -175,7 +175,7 @@ bindsym $mod+r mode "resize"
 bar {
 	#font pango:Droid Sans Mono 11
 	status_command ~/.local/bin/bumblebee-status -m \
-	 pomodoro playerctl indicator traffic cpu memory datetime pasink  pasource  bluetooth2 battery  \
+	 pomodoro playerctl  traffic cpu memory datetime pasink  pasource   battery  \
 	 -p indicator.include=capslock indicator.signalstype=critical \
 	  traffic.showname=false    \
 	  playerctl.format='{{artist}} [{{duration(position)}}/{{duration(mpris:length)}}]' \
