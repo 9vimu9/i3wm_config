@@ -46,6 +46,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Control+s exec gnome-control-center
 
 # Enable Print Screen
 bindsym --release $mod+c exec flameshot gui 
@@ -175,10 +176,10 @@ bindsym $mod+r mode "resize"
 bar {
 	#font pango:Droid Sans Mono 11
 	status_command ~/.local/bin/bumblebee-status -m \
-	 pomodoro playerctl  traffic cpu memory datetime pasink  pasource   battery  \
+	  playerctl  pomodoro traffic cpu memory datetime pasink  pasource   battery  \
 	 -p indicator.include=capslock indicator.signalstype=critical \
 	  traffic.showname=false    \
-	  playerctl.format='{{artist}} [{{duration(position)}}/{{duration(mpris:length)}}]' \
+	  playerctl.format='{{title}} {{duration(position)}}/{{duration(mpris:length)}}' \
           playerctl.layout='playerctl.song,playerctl.pause' \
          cpu.format='{:.0f}%' traffic.format='{:.01f}' \
 	  traffic.states="up" memory.format='{percent:2.0f}%' \
