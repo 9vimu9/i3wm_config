@@ -178,7 +178,7 @@ bar {
 	 pomodoro playerctl indicator traffic cpu memory datetime pasink  pasource  bluetooth2 battery  \
 	 -p indicator.include=capslock indicator.signalstype=critical \
 	  traffic.showname=false    \
-	  playerctl.format='{{artist}} -> {{duration(position)}}/{{duration(mpris:length)}}' \
+	  playerctl.format='{{artist}} [{{duration(position)}}/{{duration(mpris:length)}}]' \
           playerctl.layout='playerctl.song,playerctl.pause' \
 	  traffic.states="up" memory.format='{percent:2.02f}%' \
 	  datetime.format="%a %b %d %H:%M:%S" bluetooth.manager=blueman-manager   \
