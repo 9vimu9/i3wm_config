@@ -257,7 +257,8 @@ bindsym $mod+less move workspace to output left
 #switch between tabs back and forth
 bindsym $mod+Tab workspace back_and_forth
 
-exec --no-startup-id xrandr --output HDMI-1 --primary --mode 1920x1080  --output eDP-1 --mode 1920x1200 --scale 1 --right-of HDMI-1
+exec --no-startup-id xrandr --output HDMI-1 --primary --mode 1920x1080  --output eDP-1 --mode 1680x1050 --scale 1 --right-of HDMI-1
+# exec --no-startup-id xrandr --output HDMI-1 --primary --mode 1920x1080  --output eDP-1 --mode 1920x1200 --scale 1 --right-of HDMI-1
 
 
-
+exec --no-startup-id /usr/libexec/gsd-xsettings
