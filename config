@@ -111,7 +111,7 @@ bindsym $mod+r mode "resize"
 
 bar {
 	status_command ~/.local/bin/bumblebee-status -m \
-	  playerctl  pomodoro traffic cpu memory datetime pasink  pasource   battery  \
+	  playerctl  pomodoro   memory datetime pasink  pasource   battery  \
 	 -p indicator.include=capslock indicator.signalstype=critical \
 	  traffic.showname=false    \
 	  playerctl.format='{{title}} {{duration(position)}}/{{duration(mpris:length)}}' \
@@ -187,14 +187,15 @@ bindsym $mod+Tab workspace back_and_forth
 exec_always if [ $(xrandr | grep ' connected' -c) -eq 2 ]; then $(xrandr --output HDMI-1 --primary --mode $monitor_screen_res  --output eDP-1 --mode $lap_screen_res --scale 1x1 --below HDMI-1); else $(xrandr --output eDP-1 --mode $lap_screen_res --scale 1x1) ; fi
 
 exec --no-startup-id /usr/libexec/gsd-xsettings
+exec --no-startup-id mkdir -p ~/Pictures/wallpapers
 exec_always  feh --randomize --bg-fill ~/Pictures/wallpapers/*
 
 # Configure 5px of space between windows and to the screen edges.
-gaps inner 3px
+gaps inner 5px
 
 # Configure an additional 5px of extra space to the screen edges,
 # for a total gap of 10px to the screen edges, and 5px between windows.
-gaps outer 3px
+gaps outer 5px
 
 # Only enable outer gaps when there is exactly one window or split container on the workspace.
 smart_gaps inverse_outer
