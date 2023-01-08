@@ -188,3 +188,13 @@ exec_always if [ $(xrandr | grep ' connected' -c) -eq 2 ]; then $(xrandr --outpu
 
 exec --no-startup-id /usr/libexec/gsd-xsettings
 exec_always  feh --randomize --bg-fill ~/Pictures/wallpapers/*
+
+# Configure 5px of space between windows and to the screen edges.
+gaps inner 3px
+
+# Configure an additional 5px of extra space to the screen edges,
+# for a total gap of 10px to the screen edges, and 5px between windows.
+gaps outer 3px
+
+# Only enable outer gaps when there is exactly one window or split container on the workspace.
+smart_gaps inverse_outer
