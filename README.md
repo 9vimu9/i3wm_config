@@ -21,3 +21,7 @@ replace config file with this config file
 `sudo apt install playerctl`
 
 identify displays and change xandar command accordingly
+
+`sudo apt-get update`
+
+`sudo apt-get install feh`
