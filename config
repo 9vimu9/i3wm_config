@@ -121,7 +121,7 @@ bar {
 	  datetime.format="%a %b %d %H:%M" bluetooth.manager=blueman-manager   \
 	 -t iceberg-dark-powerline 
 	position top
-	i3bar_command i3bar --transparency
+#	i3bar_command i3bar --transparency
 	colors {
         	background #000000
         	statusline #ffffff
@@ -198,4 +198,12 @@ gaps inner 5px
 gaps outer 5px
 
 # Only enable outer gaps when there is exactly one window or split container on the workspace.
-smart_gaps inverse_outer
+smart_gaps on
+
+hide_edge_borders smart
+
+default_border pixel 1
+default_floating_border pixel 1
+
+
+exec picom
